@@ -1,0 +1,54 @@
+{
+  "items": [
+    {
+      "id": "l-1",
+      "vegetableId": "veg-a",
+      "amount": "[量]",
+      "seller": "[ニックネーム]",
+      "sellerType": "grower",
+      "diaryCount": 8,
+      "delivery": {
+        "ship": true,
+        "handoffArea": "[エリア]"
+      },
+      "distanceKm": 1.2,
+      "price": 500
+    },
+    {
+      "id": "l-2",
+      "vegetableId": "veg-b",
+      "amount": "[量]",
+      "seller": "[農家名]",
+      "sellerType": "producer",
+      "diaryCount": 0,
+      "delivery": {
+        "ship": true,
+        "handoffArea": null
+      },
+      "distanceKm": 12,
+      "price": 800
+    },
+    {
+      "id": "l-3",
+      "vegetableId": "veg-c",
+      "amount": "[量]",
+      "seller": "[ニックネーム]",
+      "sellerType": "grower",
+      "diaryCount": 3,
+      "delivery": {
+        "ship": false,
+        "handoffArea": "[エリア]"
+      },
+      "distanceKm": 2.5,
+      "price": 300
+    }
+  ],
+  "chefShops": [
+    {
+      "id": "cs-1",
+      "name": "[店舗名]",
+      "vegetableId": "veg-a",
+      "course": "[野菜名A]のコース"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+[
+  {
+    "id": "r-1",
+    "vegetableIds": [
+      "veg-a"
+    ],
+    "title": "[野菜名A]のまるごとロースト",
+    "author": "[シェフ名]",
+    "byChef": true,
+    "ingredients": [
+      "[野菜名A]",
+      "[材料]",
+      "[材料]"
+    ],
+    "steps": [
+      "[手順1]",
+      "[手順2]",
+      "[手順3]"
+    ],
+    "usedOwnHarvest": false
+  },
+  {
+    "id": "r-2",
+    "vegetableIds": [
+      "veg-a",
+      "veg-b"
+    ],
+    "title": "[野菜名A]と[野菜名B]の食べ比べサラダ",
+    "author": "[ニックネーム]",
+    "byChef": false,
+    "ingredients": [
+      "[野菜名A]",
+      "[野菜名B]",
+      "[材料]"
+    ],
+    "steps": [
+      "[手順1]",
+      "[手順2]"
+    ],
+    "usedOwnHarvest": true
+  },
+  {
+    "id": "r-3",
+    "vegetableIds": [
+      "veg-c"
+    ],
+    "title": "[野菜名C]の炊き込みご飯",
+    "author": "[ニックネーム]",
+    "byChef": false,
+    "ingredients": [
+      "[野菜名C]",
+      "[材料]"
+    ],
+    "steps": [
+      "[手順1]",
+      "[手順2]"
+    ],
+    "usedOwnHarvest": true
+  }
+]

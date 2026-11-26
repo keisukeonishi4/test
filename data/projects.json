@@ -1,0 +1,38 @@
+[
+  {
+    "id": "kodomo-shokudo",
+    "title": "消えかけの野菜を、子ども食堂のごはんに。",
+    "raised": 620000,
+    "goal": 1000000,
+    "supporters": 140,
+    "daysLeft": 21,
+    "seedsDelivered": 380,
+    "plans": [
+      {
+        "id": "p-1",
+        "kind": "personal",
+        "label": "¥[金額]",
+        "title": "子ども食堂に種を1袋届ける",
+        "description": "お礼：育った様子のレポート"
+      },
+      {
+        "id": "p-2",
+        "kind": "personal",
+        "label": "¥[金額]",
+        "title": "届ける＋自分にも同じ種",
+        "description": "一緒に育てる「なかま栽培」"
+      },
+      {
+        "id": "p-3",
+        "kind": "corporate",
+        "label": "企業向け",
+        "title": "野菜オーナー（協賛）",
+        "description": "育てる人の購入費を負担し、収穫を子どもへ"
+      }
+    ],
+    "next": {
+      "title": "絶滅危惧野菜 料理バトル",
+      "description": "シェフ × 調理専門学校生"
+    }
+  }
+]

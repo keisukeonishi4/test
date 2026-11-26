@@ -1,0 +1,57 @@
+{
+  "nickname": "[ニックネーム]",
+  "level": 2,
+  "nextWantCount": 3,
+  "points": 1200,
+  "grownCount": 2,
+  "growing": [
+    {
+      "vegetableId": "veg-a",
+      "day": 24,
+      "nextTask": "[追肥]",
+      "nextDate": "[日付]"
+    }
+  ],
+  "collection": [
+    {
+      "vegetableId": "veg-a",
+      "collected": true
+    },
+    {
+      "vegetableId": "veg-c",
+      "collected": true
+    },
+    {
+      "vegetableId": "veg-b",
+      "collected": false
+    },
+    {
+      "vegetableId": "veg-d",
+      "collected": false
+    },
+    {
+      "vegetableId": "veg-e",
+      "collected": false
+    }
+  ],
+  "history": [
+    {
+      "id": "h-1",
+      "label": "[野菜名A]の種（EC）",
+      "date": "[日付]",
+      "points": 19
+    },
+    {
+      "id": "h-2",
+      "label": "応援プロジェクト",
+      "date": "[日付]",
+      "points": null
+    },
+    {
+      "id": "h-3",
+      "label": "レシピ投稿",
+      "date": "[日付]",
+      "points": 50
+    }
+  ]
+}

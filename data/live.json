@@ -1,0 +1,53 @@
+{
+  "id": "live-1",
+  "isLive": true,
+  "title": "[野菜名A]の“まるごと”一皿",
+  "homeTitle": "[シェフ名]と、畑で[野菜名A]を収穫してそのまま一品つくる",
+  "chef": "[シェフ名]",
+  "shop": "[店舗名]",
+  "vegetableId": "veg-a",
+  "viewers": 230,
+  "poll": {
+    "question": "みんなで決める：次につくるのは？",
+    "options": [
+      {
+        "id": "a",
+        "label": "A 炊き込みご飯",
+        "votes": 58
+      },
+      {
+        "id": "b",
+        "label": "B フリット",
+        "votes": 42
+      }
+    ]
+  },
+  "products": [
+    {
+      "id": "lp-1",
+      "kind": "seed",
+      "title": "育てたい：[野菜名A]の種",
+      "note": "ライブ限定 [ ]pt"
+    },
+    {
+      "id": "lp-2",
+      "kind": "harvest",
+      "title": "食べたい：収穫野菜セット",
+      "note": "レシピカード付き"
+    }
+  ],
+  "comments": [
+    {
+      "author": "[ユーザーA]",
+      "body": "断面きれい！家でも育てられますか？"
+    },
+    {
+      "author": "[シェフ名]",
+      "body": "プランターでもOK。育て方はコミュニティに"
+    },
+    {
+      "author": "[ユーザーB]",
+      "body": "種買いました！"
+    }
+  ]
+}

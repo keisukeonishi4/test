@@ -1,0 +1,103 @@
+[
+  {
+    "id": "wiki-a",
+    "type": "wiki",
+    "vegetableId": "veg-a",
+    "title": "[野菜名A] 育て方ナレッジ",
+    "region": "[地域A]",
+    "editors": 12,
+    "updatedAt": "[日付]",
+    "sections": [
+      {
+        "heading": "種まき",
+        "body": "[種まきのコツ]"
+      },
+      {
+        "heading": "水やり・追肥",
+        "body": "[水やり・追肥のコツ]"
+      },
+      {
+        "heading": "収穫",
+        "body": "[収穫のタイミング]"
+      }
+    ]
+  },
+  {
+    "id": "wiki-b",
+    "type": "wiki",
+    "vegetableId": "veg-b",
+    "title": "[野菜名B] 育て方ナレッジ",
+    "region": "[地域B]",
+    "editors": 5,
+    "updatedAt": "[日付]",
+    "sections": [
+      {
+        "heading": "種まき",
+        "body": "[種まきのコツ]"
+      },
+      {
+        "heading": "収穫",
+        "body": "[収穫のタイミング]"
+      }
+    ]
+  },
+  {
+    "id": "diary-1",
+    "type": "diary",
+    "vegetableId": "veg-a",
+    "author": "[ニックネーム]",
+    "authorLevel": 3,
+    "day": 24,
+    "body": "[本文：今日の様子、工夫したこと]",
+    "photoLabel": "成長記録の写真",
+    "likes": 18,
+    "comments": 4
+  },
+  {
+    "id": "diary-2",
+    "type": "diary",
+    "vegetableId": "veg-c",
+    "author": "[ニックネーム]",
+    "authorLevel": 1,
+    "day": 9,
+    "body": "[本文：今日の様子、工夫したこと]",
+    "photoLabel": "成長記録の写真",
+    "likes": 6,
+    "comments": 1
+  },
+  {
+    "id": "q-1",
+    "type": "question",
+    "vegetableId": "veg-a",
+    "author": "[ニックネーム]",
+    "title": "[野菜名A]の葉が黄色くなってきました",
+    "body": "[質問の本文]",
+    "answers": [
+      {
+        "author": "[生産者名]",
+        "badge": "producer",
+        "body": "[回答の本文]"
+      },
+      {
+        "author": "[ニックネーム]",
+        "badge": "grower",
+        "body": "[回答の本文]"
+      }
+    ]
+  },
+  {
+    "id": "q-2",
+    "type": "question",
+    "vegetableId": "veg-b",
+    "author": "[ニックネーム]",
+    "title": "[野菜名B]はプランターでも育ちますか？",
+    "body": "[質問の本文]",
+    "answers": [
+      {
+        "author": "[ニックネーム]",
+        "badge": "grower",
+        "body": "[回答の本文]"
+      }
+    ]
+  }
+]

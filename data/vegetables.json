@@ -1,0 +1,342 @@
+[
+  {
+    "id": "veg-a",
+    "name": "[野菜名A]",
+    "furigana": "[ふりがな]",
+    "region": "[地域A]",
+    "area": "east",
+    "seasons": [
+      "spring"
+    ],
+    "sowMonths": [
+      3,
+      4
+    ],
+    "daysToHarvest": 60,
+    "rarity": 1,
+    "difficulty": "easy",
+    "planterOk": true,
+    "character": [
+      "[見た目の特徴：形・色・大きさ]",
+      "[名前の由来・歴史の小ネタ]",
+      "[おいしさの特徴：食感・甘み]"
+    ],
+    "growersCount": 120,
+    "photoLabels": [
+      "写真：全体",
+      "写真：断面",
+      "写真：畑",
+      "写真：料理"
+    ],
+    "seed": {
+      "seedsPerPack": 20,
+      "storePrice": 300,
+      "ecPrice": 380,
+      "ecPoints": 19
+    },
+    "storeIds": [
+      "store-a",
+      "store-c",
+      "store-e"
+    ],
+    "featuredToday": true
+  },
+  {
+    "id": "veg-b",
+    "name": "[野菜名B]",
+    "furigana": "[ふりがな]",
+    "region": "[地域B]",
+    "area": "west",
+    "seasons": [
+      "summer"
+    ],
+    "sowMonths": [
+      4,
+      5
+    ],
+    "daysToHarvest": 70,
+    "rarity": 2,
+    "difficulty": "easy",
+    "planterOk": true,
+    "character": [
+      "[見た目の特徴：形・色・大きさ]",
+      "[名前の由来・歴史の小ネタ]",
+      "[おいしさの特徴：食感・甘み]"
+    ],
+    "growersCount": 109,
+    "photoLabels": [
+      "写真：全体",
+      "写真：断面",
+      "写真：畑",
+      "写真：料理"
+    ],
+    "seed": {
+      "seedsPerPack": 20,
+      "storePrice": 300,
+      "ecPrice": 380,
+      "ecPoints": 19
+    },
+    "storeIds": [
+      "store-a",
+      "store-b",
+      "store-d"
+    ],
+    "featuredToday": true
+  },
+  {
+    "id": "veg-c",
+    "name": "[野菜名C]",
+    "furigana": "[ふりがな]",
+    "region": "[地域C]",
+    "area": "east",
+    "seasons": [
+      "summer",
+      "autumn"
+    ],
+    "sowMonths": [
+      5,
+      6
+    ],
+    "daysToHarvest": 80,
+    "rarity": 3,
+    "difficulty": "normal",
+    "planterOk": true,
+    "character": [
+      "[見た目の特徴：形・色・大きさ]",
+      "[名前の由来・歴史の小ネタ]",
+      "[おいしさの特徴：食感・甘み]"
+    ],
+    "growersCount": 98,
+    "photoLabels": [
+      "写真：全体",
+      "写真：断面",
+      "写真：畑",
+      "写真：料理"
+    ],
+    "seed": {
+      "seedsPerPack": 20,
+      "storePrice": 300,
+      "ecPrice": 380,
+      "ecPoints": 19
+    },
+    "storeIds": [
+      "store-a",
+      "store-c",
+      "store-e"
+    ],
+    "featuredToday": true
+  },
+  {
+    "id": "veg-d",
+    "name": "[野菜名D]",
+    "furigana": "[ふりがな]",
+    "region": "[地域D]",
+    "area": "west",
+    "seasons": [
+      "autumn"
+    ],
+    "sowMonths": [
+      7,
+      8
+    ],
+    "daysToHarvest": 90,
+    "rarity": 1,
+    "difficulty": "easy",
+    "planterOk": false,
+    "character": [
+      "[見た目の特徴：形・色・大きさ]",
+      "[名前の由来・歴史の小ネタ]",
+      "[おいしさの特徴：食感・甘み]"
+    ],
+    "growersCount": 87,
+    "photoLabels": [
+      "写真：全体",
+      "写真：断面",
+      "写真：畑",
+      "写真：料理"
+    ],
+    "seed": {
+      "seedsPerPack": 20,
+      "storePrice": 300,
+      "ecPrice": 380,
+      "ecPoints": 19
+    },
+    "storeIds": [
+      "store-a",
+      "store-b",
+      "store-d"
+    ],
+    "featuredToday": false
+  },
+  {
+    "id": "veg-e",
+    "name": "[野菜名E]",
+    "furigana": "[ふりがな]",
+    "region": "[地域A]",
+    "area": "east",
+    "seasons": [
+      "winter"
+    ],
+    "sowMonths": [
+      9,
+      10
+    ],
+    "daysToHarvest": 100,
+    "rarity": 2,
+    "difficulty": "easy",
+    "planterOk": true,
+    "character": [
+      "[見た目の特徴：形・色・大きさ]",
+      "[名前の由来・歴史の小ネタ]",
+      "[おいしさの特徴：食感・甘み]"
+    ],
+    "growersCount": 76,
+    "photoLabels": [
+      "写真：全体",
+      "写真：断面",
+      "写真：畑",
+      "写真：料理"
+    ],
+    "seed": {
+      "seedsPerPack": 20,
+      "storePrice": 300,
+      "ecPrice": 380,
+      "ecPoints": 19
+    },
+    "storeIds": [
+      "store-a",
+      "store-c",
+      "store-e"
+    ],
+    "featuredToday": false
+  },
+  {
+    "id": "veg-f",
+    "name": "[野菜名F]",
+    "furigana": "[ふりがな]",
+    "region": "[地域B]",
+    "area": "west",
+    "seasons": [
+      "spring",
+      "summer"
+    ],
+    "sowMonths": [
+      3,
+      5
+    ],
+    "daysToHarvest": 110,
+    "rarity": 3,
+    "difficulty": "normal",
+    "planterOk": true,
+    "character": [
+      "[見た目の特徴：形・色・大きさ]",
+      "[名前の由来・歴史の小ネタ]",
+      "[おいしさの特徴：食感・甘み]"
+    ],
+    "growersCount": 65,
+    "photoLabels": [
+      "写真：全体",
+      "写真：断面",
+      "写真：畑",
+      "写真：料理"
+    ],
+    "seed": {
+      "seedsPerPack": 20,
+      "storePrice": 300,
+      "ecPrice": 380,
+      "ecPoints": 19
+    },
+    "storeIds": [
+      "store-a",
+      "store-b",
+      "store-d"
+    ],
+    "featuredToday": false
+  },
+  {
+    "id": "veg-g",
+    "name": "[野菜名G]",
+    "furigana": "[ふりがな]",
+    "region": "[地域C]",
+    "area": "east",
+    "seasons": [
+      "autumn",
+      "winter"
+    ],
+    "sowMonths": [
+      8,
+      9
+    ],
+    "daysToHarvest": 120,
+    "rarity": 1,
+    "difficulty": "easy",
+    "planterOk": true,
+    "character": [
+      "[見た目の特徴：形・色・大きさ]",
+      "[名前の由来・歴史の小ネタ]",
+      "[おいしさの特徴：食感・甘み]"
+    ],
+    "growersCount": 54,
+    "photoLabels": [
+      "写真：全体",
+      "写真：断面",
+      "写真：畑",
+      "写真：料理"
+    ],
+    "seed": {
+      "seedsPerPack": 20,
+      "storePrice": 300,
+      "ecPrice": 380,
+      "ecPoints": 19
+    },
+    "storeIds": [
+      "store-a",
+      "store-c",
+      "store-e"
+    ],
+    "featuredToday": false
+  },
+  {
+    "id": "veg-h",
+    "name": "[野菜名H]",
+    "furigana": "[ふりがな]",
+    "region": "[地域D]",
+    "area": "west",
+    "seasons": [
+      "winter",
+      "spring"
+    ],
+    "sowMonths": [
+      10,
+      11
+    ],
+    "daysToHarvest": 130,
+    "rarity": 2,
+    "difficulty": "easy",
+    "planterOk": false,
+    "character": [
+      "[見た目の特徴：形・色・大きさ]",
+      "[名前の由来・歴史の小ネタ]",
+      "[おいしさの特徴：食感・甘み]"
+    ],
+    "growersCount": 43,
+    "photoLabels": [
+      "写真：全体",
+      "写真：断面",
+      "写真：畑",
+      "写真：料理"
+    ],
+    "seed": {
+      "seedsPerPack": 20,
+      "storePrice": 300,
+      "ecPrice": 380,
+      "ecPoints": 19
+    },
+    "storeIds": [
+      "store-a",
+      "store-b",
+      "store-d"
+    ],
+    "featuredToday": false
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "store-a",
+    "name": "[店舗名A]",
+    "address": "[住所]",
+    "distanceKm": 0.8,
+    "mapPos": {
+      "x": 30,
+      "y": 40
+    },
+    "hours": "[営業時間]",
+    "coupon": "[来店クーポンの内容]"
+  },
+  {
+    "id": "store-b",
+    "name": "[店舗名B]",
+    "address": "[住所]",
+    "distanceKm": 1.5,
+    "mapPos": {
+      "x": 62,
+      "y": 28
+    },
+    "hours": "[営業時間]",
+    "coupon": "[来店クーポンの内容]"
+  },
+  {
+    "id": "store-c",
+    "name": "[店舗名C]",
+    "address": "[住所]",
+    "distanceKm": 2.3,
+    "mapPos": {
+      "x": 45,
+      "y": 68
+    },
+    "hours": "[営業時間]",
+    "coupon": "[来店クーポンの内容]"
+  },
+  {
+    "id": "store-d",
+    "name": "[店舗名D]",
+    "address": "[住所]",
+    "distanceKm": 3.1,
+    "mapPos": {
+      "x": 78,
+      "y": 55
+    },
+    "hours": "[営業時間]",
+    "coupon": null
+  },
+  {
+    "id": "store-e",
+    "name": "[店舗名E]",
+    "address": "[住所]",
+    "distanceKm": 4.6,
+    "mapPos": {
+      "x": 18,
+      "y": 74
+    },
+    "hours": "[営業時間]",
+    "coupon": null
+  }
+]
