@@ -2,6 +2,10 @@
 
 export type Season = "spring" | "summer" | "autumn" | "winter";
 
+// イラストの描き分け（実在品種ではなく、形と色の組み合わせ）
+export type VegShape = "turnip" | "daikon" | "eggplant" | "squash" | "carrot" | "chili" | "greens" | "cucumber";
+export type VegColor = "red" | "white" | "purple" | "orange" | "green" | "yellow";
+
 export type Vegetable = {
   id: string;
   name: string; // "[野菜名A]"
@@ -16,7 +20,6 @@ export type Vegetable = {
   planterOk: boolean;
   character: string[]; // この野菜の個性（3項目）
   growersCount: number; // 育てる人（ダミー）
-  photoLabels: string[]; // 写真スライダーのラベル
   seed: {
     seedsPerPack: number; // ダミー
     storePrice: number; // 店頭価格（ダミー。必ず ecPrice より安い）
@@ -25,6 +28,7 @@ export type Vegetable = {
   };
   storeIds: string[];
   featuredToday: boolean; // 今日出会える伝統野菜
+  art: { shape: VegShape; color: VegColor };
 };
 
 export type Store = {

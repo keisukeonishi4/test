@@ -24,7 +24,13 @@
 - データはすべて `/data/*.json` のモック。型は `lib/types.ts`、読み込みは `lib/data.ts` 経由で行い、ページから JSON を直接 import しない。
   - `vegetables.json` `stores.json` `posts.json` `recipes.json` `listings.json` `projects.json` `live.json` `user.json`
 - モックの操作状態（投票・ポイント・投稿・クーポンなど）は `lib/mock-store.tsx` の Context に持ち、`sessionStorage` に保存する。読み書きは必ず try/catch し、保存できなくても表示が崩れないようにする。
-- 画像はすべて `<Placeholder label="野菜写真" />`（グレーの枠＋ラベル）。実画像は使わない。
+- 画像は `components/illust/Illust.tsx` の自作SVGイラストを使う（外部の写真・生成画像は使わない）。
+  - 野菜は `vegetables.json` の `art`（形 `shape` と色 `color`）で描き分ける。実在品種に見せない。
+  - 場面は `kind` で選ぶ：`veg` `section` `field` `dish` `live` `seed` `market` `kids` `sprout` `map` `chef`。
+  - 必ず `label` を渡す（`aria-label="イラスト：…"` になる）。
+  - イラストの色は `--color-il-*` トークンだけを使う。文字色には使わない。
+  - 映像の埋め込み枠など「中身が外部」のものだけ `<Placeholder label="…" />`（グレーの枠＋ラベル）を使う。
+- Tailwind の `@theme` は `static` 指定（イラストが CSS 変数を直接参照するため、未使用の色も出力させる）。
 - 確認コマンド：`npm run typecheck` / `npm run check:words` / `npm run build`。コミット前に3つとも通す。
 
 ## 文言のルール

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme {
+@theme static {
   --font-sans: var(--font-noto-sans-jp), "Hiragino Sans", "Noto Sans JP", sans-serif;
 
   /* 色トークン（CLAUDE.md のデザインルール） */
@@ -16,6 +16,26 @@
   --color-accent-wash: #eef3ee;  /* 薄い緑（ポイント案内など） */
   --color-accent-soft: #9db59a;  /* コレクションの塗り（装飾） */
   --color-live: #b3471b;         /* ライブ・絶滅危惧度・質問ラベルのみ（白文字 5.5:1） */
+
+  /* イラスト専用（装飾。文字色には使わない） */
+  --color-il-cream: #f6f1e4;
+  --color-il-mint: #e4efe6;
+  --color-il-sky: #dfeaf0;
+  --color-il-soil: #8a6a4f;
+  --color-il-soil-dark: #6e5340;
+  --color-il-leaf: #4f8a4c;
+  --color-il-leaf-dark: #2f6a3a;
+  --color-il-leaf-light: #9cc487;
+  --color-il-root: #f3efe4;
+  --color-il-red: #c4485a;
+  --color-il-purple: #6b3f7a;
+  --color-il-orange: #e0893c;
+  --color-il-yellow: #e9c45a;
+  --color-il-green: #6aa356;
+  --color-il-table: #e3cfae;
+  --color-il-wood: #b98f63;
+  --color-il-plate: #ffffff;
+  --color-il-ink: #3a3a36;
 
   --container-app: 640px;
 }

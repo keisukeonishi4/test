@@ -9,6 +9,8 @@ import { Placeholder } from "@/components/ui/Placeholder";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import { Card } from "@/components/ui/Section";
 import { ChipDemo, TabsDemo } from "./Demo";
+import { Illust, type IllustKind } from "@/components/illust/Illust";
+import { vegetables } from "@/lib/data";
 
 export const metadata: Metadata = { title: "共通パーツ" };
 
@@ -20,6 +22,19 @@ function Block({ title, children }: { title: string; children: ReactNode }) {
     </section>
   );
 }
+
+const scenes: [IllustKind, string][] = [
+  ["section", "断面"],
+  ["field", "畑"],
+  ["dish", "料理"],
+  ["live", "ライブ（シェフ×収穫）"],
+  ["seed", "種袋"],
+  ["market", "収穫野菜"],
+  ["kids", "子ども食堂の食卓"],
+  ["sprout", "栽培日記"],
+  ["map", "地図"],
+  ["chef", "シェフ"],
+];
 
 const colors = [
   ["ink", "bg-ink", "本文"],
@@ -77,6 +92,27 @@ export default function StyleguidePage() {
           <LiveBadge>LIVE 配信中</LiveBadge>
           <ProducerBadge />
         </div>
+      </Block>
+      <Block title="イラスト：野菜（データの art で形と色を指定）">
+        <ul className="grid grid-cols-4 gap-2">
+          {vegetables.map((v) => (
+            <li key={v.id}>
+              <Illust kind="veg" veg={v.art} label={`${v.name}の全体`} className="aspect-square" />
+              <p className="mt-1 text-center text-xs">{v.name}</p>
+            </li>
+          ))}
+        </ul>
+      </Block>
+      <Block title="イラスト：場面">
+        <ul className="grid grid-cols-2 gap-3">
+          {scenes.map(([k, label]) => (
+            <li key={k}>
+              <Illust kind={k} veg={vegetables[0].art} label={label} className="aspect-[4/3]" />
+              <p className="mt-1 text-sm">{label}</p>
+            </li>
+          ))}
+        </ul>
+        <Illust kind="live" veg={vegetables[1].art} label="横長の例（ライブのサムネイル）" className="aspect-video" />
       </Block>
       <Block title="プレースホルダー・カード・進捗">
         <Placeholder label="野菜写真" className="aspect-square w-32" />

@@ -22,12 +22,6 @@
       "[おいしさの特徴：食感・甘み]"
     ],
     "growersCount": 120,
-    "photoLabels": [
-      "写真：全体",
-      "写真：断面",
-      "写真：畑",
-      "写真：料理"
-    ],
     "seed": {
       "seedsPerPack": 20,
       "storePrice": 300,
@@ -39,7 +33,11 @@
       "store-c",
       "store-e"
     ],
-    "featuredToday": true
+    "featuredToday": true,
+    "art": {
+      "shape": "turnip",
+      "color": "red"
+    }
   },
   {
     "id": "veg-b",
@@ -64,12 +62,6 @@
       "[おいしさの特徴：食感・甘み]"
     ],
     "growersCount": 109,
-    "photoLabels": [
-      "写真：全体",
-      "写真：断面",
-      "写真：畑",
-      "写真：料理"
-    ],
     "seed": {
       "seedsPerPack": 20,
       "storePrice": 300,
@@ -81,7 +73,11 @@
       "store-b",
       "store-d"
     ],
-    "featuredToday": true
+    "featuredToday": true,
+    "art": {
+      "shape": "daikon",
+      "color": "white"
+    }
   },
   {
     "id": "veg-c",
@@ -107,12 +103,6 @@
       "[おいしさの特徴：食感・甘み]"
     ],
     "growersCount": 98,
-    "photoLabels": [
-      "写真：全体",
-      "写真：断面",
-      "写真：畑",
-      "写真：料理"
-    ],
     "seed": {
       "seedsPerPack": 20,
       "storePrice": 300,
@@ -124,7 +114,11 @@
       "store-c",
       "store-e"
     ],
-    "featuredToday": true
+    "featuredToday": true,
+    "art": {
+      "shape": "eggplant",
+      "color": "purple"
+    }
   },
   {
     "id": "veg-d",
@@ -149,12 +143,6 @@
       "[おいしさの特徴：食感・甘み]"
     ],
     "growersCount": 87,
-    "photoLabels": [
-      "写真：全体",
-      "写真：断面",
-      "写真：畑",
-      "写真：料理"
-    ],
     "seed": {
       "seedsPerPack": 20,
       "storePrice": 300,
@@ -166,7 +154,11 @@
       "store-b",
       "store-d"
     ],
-    "featuredToday": false
+    "featuredToday": false,
+    "art": {
+      "shape": "squash",
+      "color": "orange"
+    }
   },
   {
     "id": "veg-e",
@@ -191,12 +183,6 @@
       "[おいしさの特徴：食感・甘み]"
     ],
     "growersCount": 76,
-    "photoLabels": [
-      "写真：全体",
-      "写真：断面",
-      "写真：畑",
-      "写真：料理"
-    ],
     "seed": {
       "seedsPerPack": 20,
       "storePrice": 300,
@@ -208,7 +194,11 @@
       "store-c",
       "store-e"
     ],
-    "featuredToday": false
+    "featuredToday": false,
+    "art": {
+      "shape": "carrot",
+      "color": "orange"
+    }
   },
   {
     "id": "veg-f",
@@ -234,12 +224,6 @@
       "[おいしさの特徴：食感・甘み]"
     ],
     "growersCount": 65,
-    "photoLabels": [
-      "写真：全体",
-      "写真：断面",
-      "写真：畑",
-      "写真：料理"
-    ],
     "seed": {
       "seedsPerPack": 20,
       "storePrice": 300,
@@ -251,7 +235,11 @@
       "store-b",
       "store-d"
     ],
-    "featuredToday": false
+    "featuredToday": false,
+    "art": {
+      "shape": "chili",
+      "color": "red"
+    }
   },
   {
     "id": "veg-g",
@@ -277,12 +265,6 @@
       "[おいしさの特徴：食感・甘み]"
     ],
     "growersCount": 54,
-    "photoLabels": [
-      "写真：全体",
-      "写真：断面",
-      "写真：畑",
-      "写真：料理"
-    ],
     "seed": {
       "seedsPerPack": 20,
       "storePrice": 300,
@@ -294,7 +276,11 @@
       "store-c",
       "store-e"
     ],
-    "featuredToday": false
+    "featuredToday": false,
+    "art": {
+      "shape": "greens",
+      "color": "green"
+    }
   },
   {
     "id": "veg-h",
@@ -320,12 +306,6 @@
       "[おいしさの特徴：食感・甘み]"
     ],
     "growersCount": 43,
-    "photoLabels": [
-      "写真：全体",
-      "写真：断面",
-      "写真：畑",
-      "写真：料理"
-    ],
     "seed": {
       "seedsPerPack": 20,
       "storePrice": 300,
@@ -337,6 +317,10 @@
       "store-b",
       "store-d"
     ],
-    "featuredToday": false
+    "featuredToday": false,
+    "art": {
+      "shape": "cucumber",
+      "color": "green"
+    }
   }
 ]
