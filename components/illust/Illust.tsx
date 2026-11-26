@@ -20,12 +20,12 @@ type VegArt = { shape: VegShape; color: VegColor };
 const DEFAULT_VEG: VegArt = { shape: "turnip", color: "red" };
 
 // 背景色と、枠いっぱいに敷くか（slice）中央に収めるか（meet）
-const meta: Record<IllustKind, { bg: string; fit: "meet" | "slice" }> = {
+const meta: Record<IllustKind, { bg: string; fit: "meet" | "slice"; wide?: boolean }> = {
   veg: { bg: "mint", fit: "meet" },
   section: { bg: "cream", fit: "meet" },
-  field: { bg: "sky", fit: "slice" },
+  field: { bg: "sky", fit: "slice", wide: true },
   dish: { bg: "table", fit: "meet" },
-  live: { bg: "sky", fit: "slice" },
+  live: { bg: "sky", fit: "slice", wide: true },
   seed: { bg: "cream", fit: "meet" },
   market: { bg: "mint", fit: "meet" },
   kids: { bg: "table", fit: "slice" },
@@ -34,21 +34,23 @@ const meta: Record<IllustKind, { bg: string; fit: "meet" | "slice" }> = {
   chef: { bg: "mint", fit: "meet" },
 };
 
+// 畑・ライブは横長（320x180）で描く
 function Field({ veg }: { veg: VegArt }) {
   return (
     <g>
-      <rect x="-100" y="96" width="400" height="160" fill={c("soil")} />
-      {[110, 136, 166].map((y, i) => (
-        <rect key={y} x="-100" y={y} width="400" height={10 + i * 3} fill={c("soil-dark")} opacity="0.5" />
+      <rect x="0" y="0" width="320" height="180" fill={c("sky")} />
+      <circle cx="272" cy="36" r="20" fill={c("yellow")} opacity="0.9" />
+      <rect x="0" y="84" width="320" height="96" fill={c("soil")} />
+      {[100, 126, 154].map((y, i) => (
+        <rect key={y} x="0" y={y} width="320" height={8 + i * 3} fill={c("soil-dark")} opacity="0.5" />
       ))}
-      <circle cx="160" cy="44" r="18" fill={c("yellow")} opacity="0.9" />
-      {[-60, -20, 20, 60, 100, 140, 180, 220, 260].map((x, i) => (
-        <g key={x} transform={`translate(${x} ${i % 2 ? 104 : 128})`}>
-          <ellipse cx="-6" cy="-8" rx="5" ry="12" fill={c("leaf")} transform="rotate(-30 -6 -8)" />
-          <ellipse cx="6" cy="-8" rx="5" ry="12" fill={c("leaf-dark")} transform="rotate(30 6 -8)" />
+      {[24, 66, 108, 150, 192, 234, 276, 304].map((x, i) => (
+        <g key={x} transform={`translate(${x} ${i % 2 ? 96 : 122})`}>
+          <ellipse cx="-5" cy="-7" rx="4.5" ry="11" fill={c("leaf")} transform="rotate(-30 -5 -7)" />
+          <ellipse cx="5" cy="-7" rx="4.5" ry="11" fill={c("leaf-dark")} transform="rotate(30 5 -7)" />
         </g>
       ))}
-      <VegShapeG shape={veg.shape} color={veg.color} x={-20} y={14} scale={0.42} />
+      <VegShapeG shape={veg.shape} color={veg.color} x={20} y={34} scale={0.46} />
     </g>
   );
 }
@@ -111,18 +113,16 @@ function Chef() {
 }
 
 function Live({ veg }: { veg: VegArt }) {
-  // 横長の枠でも切れないよう、主役は y=60〜150 に収める
   return (
     <g>
       <Field veg={veg} />
-      <g>
-        <path d="M108 176 Q108 140 136 138 Q164 140 164 176Z" fill={c("plate")} />
-        <circle cx="136" cy="120" r="17" fill={c("table")} />
-        <ChefHat x={136} y={102} s={0.7} />
-        <circle cx="130" cy="118" r="2" fill={c("ink")} />
-        <circle cx="142" cy="118" r="2" fill={c("ink")} />
-        <VegShapeG shape={veg.shape} color={veg.color} x={6} y={40} scale={0.3} />
-      </g>
+      <path d="M176 180 Q176 142 212 140 Q248 142 248 180Z" fill={c("plate")} />
+      <circle cx="212" cy="120" r="19" fill={c("table")} />
+      <ChefHat x={212} y={100} s={0.78} />
+      <circle cx="205" cy="118" r="2.2" fill={c("ink")} />
+      <circle cx="219" cy="118" r="2.2" fill={c("ink")} />
+      <path d="M206 128 Q212 132 218 128" stroke={c("ink")} strokeWidth="2" fill="none" strokeLinecap="round" />
+      <VegShapeG shape={veg.shape} color={veg.color} x={78} y={52} scale={0.26} />
     </g>
   );
 }
@@ -255,7 +255,7 @@ export function Illust({
       style={{ backgroundColor: c(m.bg) }}
     >
       <svg
-        viewBox="0 0 200 200"
+        viewBox={m.wide ? "0 0 320 180" : "0 0 200 200"}
         preserveAspectRatio={`xMidYMid ${m.fit}`}
         className="absolute inset-0 size-full"
         aria-hidden="true"
