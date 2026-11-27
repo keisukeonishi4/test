@@ -5,6 +5,7 @@ import { TextLink, ButtonLink } from "@/components/ui/Button";
 import { Illust } from "@/components/illust/Illust";
 import { Icon } from "@/components/ui/Icon";
 import { difficultyLabel } from "@/lib/labels";
+import { months, POINTS } from "@/lib/format";
 import type { Post, Recipe, Vegetable } from "@/lib/types";
 
 type Diary = Extract<Post, { type: "diary" }>;
@@ -20,8 +21,8 @@ export function DetailTabs({ veg, recipes, diaries }: { veg: Vegetable; recipes:
       current={current}
       items={[
         { id: "grow", label: "育て方" },
-        { id: "recipe", label: "レシピ [数]" },
-        { id: "growers", label: "育てる人 [数]" },
+        { id: "recipe", label: `レシピ ${veg.recipeCount}` },
+        { id: "growers", label: `育てる人 ${veg.growersCount}` },
       ]}
     >
       {current === "grow" && <Grow veg={veg} />}
@@ -34,8 +35,8 @@ export function DetailTabs({ veg, recipes, diaries }: { veg: Vegetable; recipes:
 function Grow({ veg }: { veg: Vegetable }) {
   const rows = [
     ["難易度", `${difficultyLabel[veg.difficulty]}${veg.planterOk ? "・プランター可" : "・畑向き"}`],
-    ["種まき", "[月]〜[月]"],
-    ["収穫まで", "約[日数]日"],
+    ["種まき", months(veg.sowMonths)],
+    ["収穫まで", `約${veg.daysToHarvest}日`],
   ];
   return (
     <div className="pt-4">
@@ -98,7 +99,7 @@ function Recipes({ veg, recipes }: { veg: Vegetable; recipes: Recipe[] }) {
       </ul>
       <ButtonLink href="/recipe/new" variant="outline" className="w-full">
         <Icon name="plus" className="size-5" />
-        レシピを投稿する（[ ]pt）
+        レシピを投稿する（{POINTS.recipe}pt）
       </ButtonLink>
     </div>
   );
@@ -107,7 +108,7 @@ function Recipes({ veg, recipes }: { veg: Vegetable; recipes: Recipe[] }) {
 function Growers({ veg, diaries }: { veg: Vegetable; diaries: Diary[] }) {
   return (
     <div className="space-y-3 pt-4">
-      <p className="text-muted">[数]人が{veg.name}を育てています。</p>
+      <p className="text-muted">{veg.growersCount}人が{veg.name}を育てています。</p>
       {diaries.length === 0 && <p className="rounded-xl bg-wash p-4 text-sm">まだ栽培日記がありません。</p>}
       <ul className="space-y-3">
         {diaries.map((d) => (
@@ -116,9 +117,9 @@ function Growers({ veg, diaries }: { veg: Vegetable; diaries: Diary[] }) {
               <Illust kind="sprout" label="成長記録" className="size-16 shrink-0" />
               <span className="min-w-0 flex-1">
                 <span className="block font-bold">
-                  {d.author} <span className="text-sm font-normal text-muted">種守 Lv.[ ]</span>
+                  {d.author} <span className="text-sm font-normal text-muted">種守 Lv.{d.authorLevel}</span>
                 </span>
-                <span className="block text-sm text-muted">栽培日記・[ ]日目</span>
+                <span className="block text-sm text-muted">栽培日記・{d.day}日目</span>
                 <span className="block truncate text-sm">{d.body}</span>
               </span>
             </Link>

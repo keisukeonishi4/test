@@ -29,6 +29,7 @@ export type Vegetable = {
   storeIds: string[];
   featuredToday: boolean; // 今日出会える伝統野菜
   art: { shape: VegShape; color: VegColor };
+  recipeCount: number; // ダミー
 };
 
 export type Store = {
@@ -53,6 +54,7 @@ export type Post =
       photoLabel: string;
       likes: number;
       comments: number;
+      createdAt: string;
     }
   | {
       id: string;
@@ -61,6 +63,7 @@ export type Post =
       author: string;
       title: string;
       body: string;
+      createdAt: string;
       answers: { author: string; badge: "grower" | "producer" | null; body: string }[];
     }
   | {
@@ -142,6 +145,7 @@ export type Live = {
     kind: "seed" | "harvest";
     title: string;
     note: string;
+    price: number; // ダミー
   }[];
   comments: { author: string; body: string }[];
 };

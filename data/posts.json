@@ -6,7 +6,7 @@
     "title": "[野菜名A] 育て方ナレッジ",
     "region": "[地域A]",
     "editors": 12,
-    "updatedAt": "[日付]",
+    "updatedAt": "2026/11/20",
     "sections": [
       {
         "heading": "種まき",
@@ -29,7 +29,7 @@
     "title": "[野菜名B] 育て方ナレッジ",
     "region": "[地域B]",
     "editors": 5,
-    "updatedAt": "[日付]",
+    "updatedAt": "2026/11/12",
     "sections": [
       {
         "heading": "種まき",
@@ -51,7 +51,8 @@
     "body": "[本文：今日の様子、工夫したこと]",
     "photoLabel": "成長記録の写真",
     "likes": 18,
-    "comments": 4
+    "comments": 4,
+    "createdAt": "2026/11/25"
   },
   {
     "id": "diary-2",
@@ -63,7 +64,8 @@
     "body": "[本文：今日の様子、工夫したこと]",
     "photoLabel": "成長記録の写真",
     "likes": 6,
-    "comments": 1
+    "comments": 1,
+    "createdAt": "2026/11/24"
   },
   {
     "id": "q-1",
@@ -83,7 +85,8 @@
         "badge": "grower",
         "body": "[回答の本文]"
       }
-    ]
+    ],
+    "createdAt": "2026/11/23"
   },
   {
     "id": "q-2",
@@ -98,6 +101,20 @@
         "badge": "grower",
         "body": "[回答の本文]"
       }
-    ]
+    ],
+    "createdAt": "2026/11/18"
+  },
+  {
+    "id": "diary-3",
+    "type": "diary",
+    "vegetableId": "veg-b",
+    "author": "[ニックネーム]",
+    "authorLevel": 4,
+    "day": 41,
+    "body": "[本文：今日の様子、工夫したこと]",
+    "photoLabel": "成長記録の写真",
+    "likes": 32,
+    "comments": 7,
+    "createdAt": "2026/11/22"
   }
 ]

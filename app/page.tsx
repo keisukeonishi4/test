@@ -9,6 +9,7 @@ import { Illust } from "@/components/illust/Illust";
 import { VegCard } from "@/components/veg/VegCard";
 import { Icon } from "@/components/ui/Icon";
 import { getVegetable, live, projects, vegetables } from "@/lib/data";
+import { pct } from "@/lib/format";
 
 export const revalidate = 86400; // 「今月まける種」を日ごとに更新
 
@@ -49,7 +50,7 @@ export default function HomePage() {
                 <LiveBadge>LIVE 配信中</LiveBadge>
               </div>
             )}
-            <span className="absolute top-3 right-3 rounded-md bg-paper px-2.5 py-1 text-sm">視聴 [人数]人</span>
+            <span className="absolute top-3 right-3 rounded-md bg-paper px-2.5 py-1 text-sm">視聴 {live.viewers}人</span>
           </div>
           <div className="space-y-4 p-4">
             <h2 id="home-live" className="text-lg leading-snug font-bold">
@@ -99,7 +100,7 @@ export default function HomePage() {
           <span className="mt-3">
             <ProgressBar value={project.raised} max={project.goal} label="子ども食堂への応援プロジェクトの達成率" />
           </span>
-          <span className="mt-2 text-sm text-muted">達成 [ ]%</span>
+          <span className="mt-2 text-sm text-muted">達成 {pct(project.raised, project.goal)}%</span>
         </Link>
       </nav>
     </Screen>

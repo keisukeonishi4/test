@@ -9,6 +9,7 @@ import { Tag } from "@/components/ui/Chip";
 import { PhotoSlider } from "@/components/zukan/PhotoSlider";
 import { DetailHeaderActions } from "@/components/zukan/DetailHeaderActions";
 import { DetailTabs } from "@/components/zukan/DetailTabs";
+import { rarityLabel, seasons } from "@/lib/format";
 import { getRecipesFor, getVegetable, posts, vegetables } from "@/lib/data";
 
 export const generateStaticParams = () => vegetables.map((v) => ({ id: v.id }));
@@ -44,10 +45,10 @@ export default async function ZukanDetailPage({ params }: { params: Promise<{ id
               <Tag>産地 {veg.region}</Tag>
             </li>
             <li>
-              <Tag>旬 [時期]</Tag>
+              <Tag>旬 {seasons(veg.seasons)}</Tag>
             </li>
             <li>
-              <Tag tone="live">絶滅危惧度 [ランク]</Tag>
+              <Tag tone="live">絶滅危惧度 {rarityLabel(veg.rarity)}</Tag>
             </li>
           </ul>
         </div>

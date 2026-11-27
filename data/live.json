@@ -27,13 +27,15 @@
       "id": "lp-1",
       "kind": "seed",
       "title": "育てたい：[野菜名A]の種",
-      "note": "ライブ限定 [ ]pt"
+      "note": "ライブ限定 +20pt",
+      "price": 380
     },
     {
       "id": "lp-2",
       "kind": "harvest",
       "title": "食べたい：収穫野菜セット",
-      "note": "レシピカード付き"
+      "note": "レシピカード付き",
+      "price": 2400
     }
   ],
   "comments": [

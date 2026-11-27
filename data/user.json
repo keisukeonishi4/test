@@ -9,7 +9,7 @@
       "vegetableId": "veg-a",
       "day": 24,
       "nextTask": "[追肥]",
-      "nextDate": "[日付]"
+      "nextDate": "2026/12/02"
     }
   ],
   "collection": [
@@ -38,19 +38,19 @@
     {
       "id": "h-1",
       "label": "[野菜名A]の種（EC）",
-      "date": "[日付]",
+      "date": "2026/10/05",
       "points": 19
     },
     {
       "id": "h-2",
       "label": "応援プロジェクト",
-      "date": "[日付]",
+      "date": "2026/10/18",
       "points": null
     },
     {
       "id": "h-3",
       "label": "レシピ投稿",
-      "date": "[日付]",
+      "date": "2026/11/03",
       "points": 50
     }
   ]

@@ -8,6 +8,9 @@ type MockState = {
   favorites: string[]; // 図鑑の♡
   coupons: string[]; // 受け取った来店クーポン（store id）
   earnedPoints: number; // このセッションで付与されたポイント（ダミー）
+  liked: string[]; // いいねした投稿
+  addedToWiki: string[]; // 「まとめに追加」した栽培日記
+  myComments: { postId: string; body: string }[]; // 自分が書いたコメント・回答
 };
 
 const initial: MockState = {
@@ -16,6 +19,9 @@ const initial: MockState = {
   favorites: [],
   coupons: [],
   earnedPoints: 0,
+  liked: [],
+  addedToWiki: [],
+  myComments: [],
 };
 
 const KEY = "yasai-isan-mock";

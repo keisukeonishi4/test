@@ -124,9 +124,9 @@ export default function StyleguidePage() {
         <Card className="p-4">
           <p className="font-bold">子ども食堂へ</p>
           <div className="mt-3">
-            <ProgressBar value={62} max={100} label="達成 [ ]%" />
+            <ProgressBar value={62} max={100} label="達成 62%" />
           </div>
-          <p className="mt-2 text-sm text-muted">達成 [ ]%</p>
+          <p className="mt-2 text-sm text-muted">達成 62%</p>
         </Card>
       </Block>
     </Screen>

@@ -11,14 +11,14 @@
       {
         "id": "p-1",
         "kind": "personal",
-        "label": "¥[金額]",
+        "label": "¥1,000",
         "title": "子ども食堂に種を1袋届ける",
         "description": "お礼：育った様子のレポート"
       },
       {
         "id": "p-2",
         "kind": "personal",
-        "label": "¥[金額]",
+        "label": "¥3,000",
         "title": "届ける＋自分にも同じ種",
         "description": "一緒に育てる「なかま栽培」"
       },

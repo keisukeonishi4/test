@@ -6,6 +6,7 @@ import { Illust } from "@/components/illust/Illust";
 import { Icon } from "@/components/ui/Icon";
 import { toggleIn, useMock } from "@/lib/mock-store";
 import type { Store, Vegetable } from "@/lib/types";
+import { months, yen } from "@/lib/format";
 
 const MODES = ["store", "ec"] as const;
 type Mode = (typeof MODES)[number];
@@ -29,7 +30,7 @@ export function BuyView({ veg, stores }: { veg: Vegetable; stores: Store[] }) {
         <Illust kind="seed" veg={veg.art} label={`${veg.name}の種袋`} className="size-20 shrink-0" />
         <div>
           <h2 className="text-xl font-bold">{veg.name}の種</h2>
-          <p className="text-muted">1袋 [粒数]粒・種まき [月]〜[月]</p>
+          <p className="text-muted">1袋 {veg.seed.seedsPerPack}粒・種まき {months(veg.sowMonths)}</p>
         </div>
       </div>
 
@@ -97,7 +98,7 @@ function StoreMode({ veg, stores }: { veg: Vegetable; stores: Store[] }) {
       <ul className="space-y-3" aria-label="取扱店の一覧（近い順）">
         {stores.map((s, i) => (
           <li key={s.id}>
-            <StoreCard store={s} index={i + 1} open={s.id === selected} onSelect={() => setSelected(s.id)} />
+            <StoreCard store={s} price={veg.seed.storePrice} index={i + 1} open={s.id === selected} onSelect={() => setSelected(s.id)} />
           </li>
         ))}
       </ul>
@@ -109,7 +110,7 @@ function StoreMode({ veg, stores }: { veg: Vegetable; stores: Store[] }) {
           ネットで買うと
         </h3>
         <p className="text-sm">
-          ¥[EC価格]・<strong>[ ]pt付与</strong>・購入履歴と栽培日記が自動でつながる・種まき時期に通知
+          {yen(veg.seed.ecPrice)}・<strong>{veg.seed.ecPoints}pt付与</strong>・購入履歴と栽培日記が自動でつながる・種まき時期に通知
         </p>
         <ButtonLink href={`/buy/${veg.id}?mode=ec`} size="lg" className="w-full">
           ECで購入する
@@ -119,7 +120,19 @@ function StoreMode({ veg, stores }: { veg: Vegetable; stores: Store[] }) {
   );
 }
 
-function StoreCard({ store, index, open, onSelect }: { store: Store; index: number; open: boolean; onSelect: () => void }) {
+function StoreCard({
+  store,
+  price,
+  index,
+  open,
+  onSelect,
+}: {
+  store: Store;
+  price: number;
+  index: number;
+  open: boolean;
+  onSelect: () => void;
+}) {
   const { state, update } = useMock();
   const shown = state.coupons.includes(store.id);
   return (
@@ -139,13 +152,13 @@ function StoreCard({ store, index, open, onSelect }: { store: Store; index: numb
           {index}
         </span>
         <span className="flex-1 text-lg font-bold">{store.name}</span>
-        <span className="text-sm text-muted">[ ]km・取扱店</span>
+        <span className="text-sm text-muted">{store.distanceKm}km・取扱店</span>
       </button>
       {open && (
         <div className="space-y-3 border-t-2 border-line px-4 pt-3 pb-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <p>
-              店頭価格 <strong className="text-xl">¥[販売所価格]</strong>
+              店頭価格 <strong className="text-xl">{yen(price)}</strong>
               <Otoku />
             </p>
             {store.coupon && (
@@ -168,7 +181,7 @@ function StoreCard({ store, index, open, onSelect }: { store: Store; index: numb
             <div role="status" className="rounded-xl border-2 border-dashed border-accent bg-accent-wash p-4 text-center">
               <p className="text-sm font-bold text-accent">来店クーポン（モック）</p>
               <p className="mt-1 text-lg font-bold">{store.coupon}</p>
-              <p className="mt-2 font-mono text-xl tracking-widest">YS-[コード]</p>
+              <p className="mt-2 font-mono text-xl tracking-widest">YS-{store.id.slice(-1).toUpperCase()}{String(1000 + index * 137)}</p>
               <p className="mt-2 text-xs text-muted">お会計のときにこの画面を店頭で見せてください</p>
             </div>
           )}
@@ -179,7 +192,7 @@ function StoreCard({ store, index, open, onSelect }: { store: Store; index: numb
 }
 
 const BENEFITS = [
-  { title: "ポイントがたまる", body: "購入で [ ]pt。レシピ投稿のポイントと合わせて使えます。" },
+  { title: "ポイントがたまる", body: "購入金額の5%がポイントに。レシピ投稿のポイントと合わせて使えます。" },
   { title: "購入履歴が残る", body: "いつ・どの品種を買ったかをマイページでふり返れます。" },
   { title: "栽培日記とつながる", body: "買った種がそのまま栽培日記に登録されます。" },
   { title: "種まき時期に通知", body: "まきどきが来たらお知らせします。" },
@@ -195,10 +208,10 @@ function EcMode({ veg }: { veg: Vegetable }) {
         </h3>
         <div className="flex items-end justify-between">
           <p>
-            EC価格 <strong className="text-2xl">¥[EC価格]</strong>
+            EC価格 <strong className="text-2xl">{yen(veg.seed.ecPrice)}</strong>
             <span className="text-sm text-muted"> / 1袋</span>
           </p>
-          <p className="text-sm font-bold text-accent">[ ]pt 付与</p>
+          <p className="text-sm font-bold text-accent">{veg.seed.ecPoints * qty}pt 付与</p>
         </div>
         <div className="flex items-center justify-between">
           <span id="qty-label" className="font-bold">
@@ -227,6 +240,10 @@ function EcMode({ veg }: { veg: Vegetable }) {
             </button>
           </div>
         </div>
+        <p className="flex items-end justify-between border-t-2 border-line pt-3">
+          <span className="font-bold">合計</span>
+          <strong className="text-2xl">{yen(veg.seed.ecPrice * qty)}</strong>
+        </p>
         <ButtonLink href={`/buy/${veg.id}/complete`} size="lg" className="w-full">
           購入する（モック）
         </ButtonLink>
@@ -252,7 +269,7 @@ function EcMode({ veg }: { veg: Vegetable }) {
 
       <div className="rounded-2xl border-2 border-line p-4">
         <p className="text-sm">
-          近くの販売所なら店頭価格 <strong>¥[販売所価格]</strong> で
+          近くの販売所なら店頭価格 <strong>{yen(veg.seed.storePrice)}</strong> で
           <Otoku />
         </p>
         <TextLink href={`/buy/${veg.id}?mode=store`}>近くの取扱店を探す</TextLink>

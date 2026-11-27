@@ -3,6 +3,7 @@ import { Screen } from "@/components/layout/Screen";
 import { BackHeader } from "@/components/layout/Headers";
 import { MockComplete } from "@/components/MockComplete";
 import { getVegetable, vegetables } from "@/lib/data";
+import { yen } from "@/lib/format";
 
 export const generateStaticParams = () => vegetables.map((v) => ({ id: v.id }));
 
@@ -17,7 +18,7 @@ export default async function BuyCompletePage({ params }: { params: Promise<{ id
         primary={{ href: "/mypage", label: "マイページで確認する" }}
         secondary={{ href: `/zukan/${veg.id}`, label: "図鑑に戻る" }}
       >
-        {veg.name}の種を購入しました（モック）。[ ]pt が付与され、購入履歴と栽培日記に登録されます。種まき時期になったらお知らせします。
+        {veg.name}の種（{yen(veg.seed.ecPrice)}）を購入しました（モック）。{veg.seed.ecPoints}pt が付与され、購入履歴と栽培日記に登録されます。種まき時期になったらお知らせします。
       </MockComplete>
     </Screen>
   );
