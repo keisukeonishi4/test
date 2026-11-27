@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { Screen } from "@/components/layout/Screen";
-import { TabHeader } from "@/components/layout/Headers";
-import { ComingSoon } from "@/components/ComingSoon";
+import { LiveView } from "@/components/live/LiveView";
+import { getVegetable, live, vegetables } from "@/lib/data";
 
 export const metadata: Metadata = { title: "ライブ配信" };
 
 export default function LivePage() {
+  const veg = getVegetable(live.vegetableId) ?? vegetables[0];
   return (
-    <Screen header={<TabHeader title="ライブ" />}>
-      <ComingSoon name="ライブ配信" />
+    <Screen>
+      <LiveView live={live} veg={veg} />
     </Screen>
   );
 }

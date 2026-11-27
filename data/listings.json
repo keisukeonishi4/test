@@ -3,7 +3,7 @@
     {
       "id": "l-1",
       "vegetableId": "veg-a",
-      "amount": "[量]",
+      "amount": "約500g",
       "seller": "[ニックネーム]",
       "sellerType": "grower",
       "diaryCount": 8,
@@ -17,7 +17,7 @@
     {
       "id": "l-2",
       "vegetableId": "veg-b",
-      "amount": "[量]",
+      "amount": "3本",
       "seller": "[農家名]",
       "sellerType": "producer",
       "diaryCount": 0,
@@ -31,7 +31,7 @@
     {
       "id": "l-3",
       "vegetableId": "veg-c",
-      "amount": "[量]",
+      "amount": "約1kg",
       "seller": "[ニックネーム]",
       "sellerType": "grower",
       "diaryCount": 3,
@@ -41,6 +41,20 @@
       },
       "distanceKm": 2.5,
       "price": 300
+    },
+    {
+      "id": "l-4",
+      "vegetableId": "veg-d",
+      "amount": "1玉（約2kg）",
+      "seller": "[農家名]",
+      "sellerType": "producer",
+      "diaryCount": 0,
+      "delivery": {
+        "ship": true,
+        "handoffArea": "[エリア]"
+      },
+      "distanceKm": 6.8,
+      "price": 1200
     }
   ],
   "chefShops": [
@@ -50,5 +64,6 @@
       "vegetableId": "veg-a",
       "course": "[野菜名A]のコース"
     }
-  ]
+  ],
+  "feeRate": 10
 }

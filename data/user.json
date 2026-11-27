@@ -8,7 +8,7 @@
     {
       "vegetableId": "veg-a",
       "day": 24,
-      "nextTask": "[追肥]",
+      "nextTask": "追肥",
       "nextDate": "2026/12/02"
     }
   ],

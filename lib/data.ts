@@ -17,6 +17,7 @@ export const posts = postsJson as Post[];
 export const recipes = recipesJson as Recipe[];
 export const listings = listingsJson.items as Listing[];
 export const chefShops = listingsJson.chefShops as ChefShop[];
+export const marketFeeRate = listingsJson.feeRate;
 export const projects = projectsJson as Project[];
 export const live = liveJson as Live;
 export const user = userJson as User;
