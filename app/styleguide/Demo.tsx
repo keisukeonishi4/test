@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Chip } from "@/components/ui/Chip";
 import { Tabs, useQueryTab } from "@/components/ui/Tabs";
+import { Segmented, useQueryValue } from "@/components/ui/Segmented";
 
 export function ChipDemo() {
   const [f, setF] = useState("near");
@@ -50,5 +51,21 @@ export function TabsDemo() {
     >
       <p className="py-4 text-muted">選択中：{cur}（URLの ?tab= と連動。←→キーでも切り替え）</p>
     </Tabs>
+  );
+}
+
+export function SegmentedDemo() {
+  const ids = ["store", "ec"] as const;
+  const cur = useQueryValue<(typeof ids)[number]>("mode", ids, "store");
+  return (
+    <Segmented
+      param="mode"
+      label="サンプルの切り替え"
+      current={cur}
+      items={[
+        { id: "store", label: "近くの販売所（おトク）" },
+        { id: "ec", label: "ネットで買う" },
+      ]}
+    />
   );
 }

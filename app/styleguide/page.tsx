@@ -8,7 +8,7 @@ import { LiveBadge, ProducerBadge } from "@/components/ui/Badge";
 import { Placeholder } from "@/components/ui/Placeholder";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import { Card } from "@/components/ui/Section";
-import { ChipDemo, TabsDemo } from "./Demo";
+import { ChipDemo, SegmentedDemo, TabsDemo } from "./Demo";
 import { Illust, type IllustKind } from "@/components/illust/Illust";
 import { vegetables } from "@/lib/data";
 
@@ -82,6 +82,11 @@ export default function StyleguidePage() {
       <Block title="タブ">
         <Suspense>
           <TabsDemo />
+        </Suspense>
+      </Block>
+      <Block title="切り替えスイッチ（?mode= と連動）">
+        <Suspense>
+          <SegmentedDemo />
         </Suspense>
       </Block>
       <Block title="タグ・バッジ">

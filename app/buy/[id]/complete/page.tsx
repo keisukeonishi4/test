@@ -11,13 +11,13 @@ export default async function BuyCompletePage({ params }: { params: Promise<{ id
   const veg = getVegetable(id);
   if (!veg) notFound();
   return (
-    <Screen header={<BackHeader title="購入完了" backHref={`/buy/${veg.id}`} />} footer="none">
+    <Screen header={<BackHeader title="購入完了" backHref={`/buy/${veg.id}?mode=ec`} />} footer="none">
       <MockComplete
         title="ご購入ありがとうございます"
         primary={{ href: "/mypage", label: "マイページで確認する" }}
         secondary={{ href: `/zukan/${veg.id}`, label: "図鑑に戻る" }}
       >
-        {veg.name}の種を購入しました（モック）。[ ]pt が付与されます。
+        {veg.name}の種を購入しました（モック）。[ ]pt が付与され、購入履歴と栽培日記に登録されます。種まき時期になったらお知らせします。
       </MockComplete>
     </Screen>
   );
